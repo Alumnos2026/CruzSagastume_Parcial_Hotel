@@ -1,5 +1,5 @@
 alert("HOLA BIENVENIDO A LA PAGINA DEL PARCIAL DE INFORMATICA HOTELERA");
-console.log("Bienvenido al parcial");
+console.log("BIENVENIDO AL EXAMEN PARCIAL DE INFORMATICA HOTELERA");
 
 // 1. String (Cadena de texto)
 let nombreHotel = "Hotel Informáticos Resort";
