@@ -31,5 +31,44 @@ console.log("--- Tipos de Datos ---");
 console.log("Tipo de nombreHotel: " + typeof nombreHotel);
 console.log("Tipo de cantidadHabitaciones: " + typeof cantidadHabitaciones);
 console.log("Tipo de tieneDisponibilidad: " + typeof tieneDisponibilidad);
-console.log("Tipo de descuentoEspecial: " + typeof descuentoEspecial); // Nota: JS devuelve 'object' por un error histórico
+console.log("Tipo de descuentoEspecial: " + typeof descuentoEspecial); 
 console.log("Tipo de proximoEvento: " + typeof proximoEvento);
+
+
+
+const todosLosBotones = document.querySelectorAll('.btn');
+
+todosLosBotones.forEach(boton => {
+    
+
+    boton.addEventListener('mouseenter', function() {
+        
+        this.style.transform = "scale(1.1)";
+        this.style.transition = "all 0.3s ease";
+        
+       
+        if (this.classList.contains('btn-success')) {
+            this.style.boxShadow = "0 0 20px #25D366";
+        } else {
+            
+            this.style.boxShadow = "0 0 15px rgba(13, 110, 253, 0.5)";
+        }
+    });
+
+   
+    boton.addEventListener('mouseleave', function() {
+        this.style.transform = "scale(1)";
+        this.style.boxShadow = "none";
+    });
+
+    
+    boton.addEventListener('mousedown', function() {
+        this.style.transform = "scale(0.95)"; 
+    });
+
+    boton.addEventListener('mouseup', function() {
+        this.style.transform = "scale(1.1)"; 
+    });
+});
+
+console.log("Efectos dinámicos de botones cargados con éxito.");
